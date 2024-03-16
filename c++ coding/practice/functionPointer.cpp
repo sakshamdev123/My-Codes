@@ -27,9 +27,9 @@ T gcd(T a, T b) { return __gcd(a, b); }
 
 int main()
 {
-    cout << operate<int>(3, mini<int>, 5, 3, 9) << endl;
-    cout << operate<double>(4, maxi<double>, 7, 12.5, 4, 8) << endl;
-    cout << operate<int>(3, gcd<int>, 18, 12, 3) << endl;
+    cout << operate(3, mini<int>, 5, 3, 9) << endl;
+    cout << operate(4, maxi<double>, 7, 12.5, 4, 8) << endl;
+    cout << operate(3, gcd<int>, 18, 12, 3) << endl;
 
     return 0;
 }
