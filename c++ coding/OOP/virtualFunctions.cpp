@@ -3,10 +3,8 @@ using namespace std;
 
 class Entity
 {
-private:
-    string entity_Name;
-
 public:
+    // string getName() { return "AI"; }
     virtual string getName() { return "AI"; }
 };
 
@@ -17,13 +15,11 @@ private:
 
 public:
     Player(const string &s) : name(s) {}
+    // string getName() { return name; }
     string getName() override { return name; }
 };
 
-void printName(Entity *ent)
-{
-    cout << ent->getName() << endl;
-}
+void printName(Entity *ent) { cout << ent->getName() << endl; }
 
 int main()
 {
