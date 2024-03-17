@@ -5,7 +5,7 @@ using namespace std;
 class Print
 {
 public:
-    virtual string getClassName() = 0;
+    virtual string getClassName() = 0; //pure virtual funtion is made by initializing it equals to 0
 };
 
 class Entity : public Print
