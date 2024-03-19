@@ -1,35 +1,45 @@
 #include <iostream>
-#include <cstdarg>
-#include <algorithm>
+#include <vector>
 using namespace std;
 
-template <class T>
-T operate(int count, T (*operation)(T, T), ...)
+void helloWorld()
 {
-    T ans;
-    va_list l;
-    va_start(l, operation);
-    ans = va_arg(l, T);
-    for (int i = 1; i < count; i++)
-        ans = operation(ans, va_arg(l, T));
-    va_end(l);
-    return ans;
+    cout << "Hello World\n";
 }
 
-template <class T>
-T mini(T a, T b) { return min(a, b); }
+void print(int a)
+{
+    cout << "Printing value: " << a << '\n';
+}
 
-template <class T>
-T maxi(T a, T b) { return max(a, b); }
-
-template <class T>
-T gcd(T a, T b) { return __gcd(a, b); }
+void forEach(const vector<int> &v, void (*func)(int))
+{
+    for (int val : v)
+        func(val);
+}
 
 int main()
 {
-    cout << operate(3, mini<int>, 5, 3, 9) << endl;
-    cout << operate(4, maxi<double>, 7, 12.5, 4, 8) << endl;
-    cout << operate(3, gcd<int>, 18, 12, 3) << endl;
+
+    auto function = helloWorld;
+    function();
+
+    void (*a)();
+    a = helloWorld;
+    void (*b)() = helloWorld;
+    a();
+
+    typedef void (*f)();
+    f g = helloWorld;
+    g();
+
+    typedef void (*h)(int);
+    h func = print;
+    func(5);
+    func(15);
+
+    vector<int> v = {1, 2, 5, 7, 4};
+    forEach(v, print);
 
     return 0;
 }
