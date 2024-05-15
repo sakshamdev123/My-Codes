@@ -29,6 +29,21 @@ cart.addToCart("Tablet", 2);
 cart.addToCart("Laptop", 3);
 console.log(cart.orders);
 
+// Closures
+// Inner functions have access to variables and parameters of outer function
+// It does not make copy of outer variables but passes it by references
+let outerFunction = (outerParameter) => {
+    let outerVariable = 2;
+    let innerFunction = () => {
+        outerVariable = outerVariable + 1;
+        console.log(outerVariable + outerParameter);
+    }
+    return innerFunction;
+}
+let innerFunction = outerFunction(1);
+innerFunction();
+innerFunction(); // it accesses the previous outerVariable by references and not a new copy
+
 // top level await
 // await without the need of async function
 console.log("start");
