@@ -1,0 +1,22 @@
+button {
+    margin-top: 10px;
+    height: 30px;
+    width: 200px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+button.darkMode {
+    background-color: #ccc;
+    color: black;
+}
+
+button.lightMode {
+    background-color: rgb(68, 68, 68);
+    color: white;
+}
+
+button:hover {
+    background-color: wheat;
+    color: black;
+}

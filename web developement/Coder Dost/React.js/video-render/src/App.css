@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.button {
+  position: absolute;
+  width: fit-content;
+  right: 20px;
+}
+
+.darkMode {
+  background-color: #333;
+}
+
+.lightMode {
+  background-color: #ccc;
+}
+
+.button.darkMode {
+  background-color: #ccc;
+  color: black;
+}
+
+.button.lightMode {
+  background-color: rgb(68, 68, 68);
+  color: white;
+}
+
+.button:hover {
+  background-color: wheat;
+  color: black;
+}
