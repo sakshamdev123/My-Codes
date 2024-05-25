@@ -1,0 +1,48 @@
+.box{
+    height:100px;
+    width:200px;
+    padding-top: 20px;
+    border-radius: 2px;
+}
+#text{
+    font-size:medium;
+    font-weight: bolder;
+    padding-top: 2px;
+}
+#main{
+    background-color: black;
+    height:100vh;
+    width:100vw;
+}
+#hello{
+    background-color: white;
+    height:35vh;
+    padding-left:10px;
+    width:16vw;
+    margin-left:500px;
+    margin-top: 150px;
+}
+#abcd{
+    padding-top: 0px;
+    border-image-width: auto;
+    border-radius: 2px;
+}
+#img{
+    height: 100px;
+    width: 200px;
+    border-radius: 5px;
+}
+#money{
+    color: blue;
+}
+#deleted{
+    margin-left: 5px;
+    color:black;
+}
+#dis{
+    color: white;
+    margin-left: 5px;
+    font-size: small;
+    background-color:aquamarine;
+    border-radius: 2px;
+}
