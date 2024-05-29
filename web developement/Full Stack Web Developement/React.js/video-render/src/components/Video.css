@@ -1,0 +1,59 @@
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: small;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.videoTitle {
+    font-weight: bold;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    width: fit-content;
+    background-color: red;
+}
+
+.edit {
+    position: absolute;
+    right: 40px;
+    top: 0px;
+    width: fit-content;
+}
+
+.edit.darkMode {
+    background-color: #ccc;
+    color: black;
+}
+
+.edit.lightMode {
+    background-color: rgb(68, 68, 68);
+    color: white;
+}
+
+.video.darkMode {
+    color: antiquewhite;
+    background-color: cadetblue;
+}
+
+.video.lightMode {
+    color: black;
+    background-color: chocolate;
+}
+
+.edit.lightMode:hover {
+    background-color: wheat;
+    color: black;
+}
+
+.edit.darkMode:hover {
+    background-color: wheat;
+    color: black;
+}

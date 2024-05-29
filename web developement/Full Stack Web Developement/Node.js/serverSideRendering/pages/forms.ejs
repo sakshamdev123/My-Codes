@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .form {
+            display: flex;
+            flex-direction: row;
+            font-size: 25px;
+        }
+
+        input {
+            height: 40px;
+            width: 250px;
+            margin: 5px;
+        }
+
+        .formInput {
+            margin-left: 10px;
+        }
+
+        select {
+            height: 40px;
+            width: 250px;
+            margin: 5px;
+        }
+
+        .submit {
+            height: 50px;
+            width: 150px;
+            font: bold;
+            font-size: large;
+            background-color: gray;
+        }
+
+        .submit:hover {
+            background-color: brown;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class='form'>
+        <div class='formName'>
+            <p>Title: </p>
+            <p>Description: </p>
+            <p>Price: </p>
+            <p>Discount Percentage: </p>
+            <p>Rating: </p>
+            <p>Brand: </p>
+            <p>Category :</p>
+            <p>Thumbnail Link: </p>
+        </div>
+        <form class="formInput" method="POST" action="/products" enctype="application/x-www-form-urlencoded">
+            <input type="text" placeholder='Product Name' name="title" required></input><br/>
+            <input type="text" placeholder='Product Description' name="description"></input><br/>
+            <input type="number" placeholder='Price' name="price" required></input><br/>
+            <input type="number" placeholder='Discount' name="discountPercentage"></input><br/>
+            <input type="number" placeholder='Rating' name="rating"></input><br/>
+            <input type="text" placeholder='Product Brand' name="brand" required></input><br/>
+            <select name="category" id="category">
+                <option value="">Select</option>
+                <option value="smartphones">Smartphones</option>
+                <option value="laptops">Laptops</option>
+            </select><br/>
+            <input type="url" placeholder='Product Image Link' name="thumbnail"></input><br/>
+            <button class='submit'>Submit</button>
+        </form>
+    </div>
+</body>
+</html>
